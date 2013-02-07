@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{#citation_dlg.title}</title>
+    <script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <link href="css/citation.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="error"></div>
+
+<div style="text-align: center;" id="loader"><img src="img/ajax-loader-lg.gif" /></div>
+<span style="display:none;" class="content">
+    <form onsubmit="CitationDialog.insert();return false;">
+        <div style="display:none;" id="citationForm">
+            <p>Title: <input id="poemAuthor" name="title" type="text" class="text" /></p>
+            <p>Author: <input id="poemTitle" name="author" type="text" class="text" /></p>
+            <p>Options: <input id="poemOptsURL" name="option" type="radio" class="radio" checked="checked" onclick="CitationDialog.checkOpts();" value="url" /> URL <input id="poemOptsBM" name="option" type="radio" class="radio" onclick="CitationDialog.checkOpts();" value="bm" /> Book/Magazine <input id="poemOptsOther" name="option" type="radio" class="radio" onclick="CitationDialog.checkOpts();" value="other" /> Other</p>
+            <div id="pURL">
+                <p>URL: <input id="poemURL" name="url" type="text" class="text" /></p>
+            </div>
+            <div id="pBM" style="display:none;">
+                <p>Book/Magazine Title: <input id="BMTitle" name="bmTitle" type="text" class="text" /></p>
+                <p>Book/Magazine Page Number(s): <input id="BMpp" name="bmPP" type="text" class="text" /></p>
+            </div>
+        </div>
+        <p id="selected">Selected text: <span id="selText"></span></p>
+        <p id="citation" style="display:none;">Citation: <span id="citText"></span></p>
+
+        <div class="mceActionPanel">
+            <input type="button" id="insert" name="insert" value="{#citation_dlg.insert}" onclick="CitationDialog.insert();" />
+            <input type="button" id="remove" name="insert" value="{#citation_dlg.remove}" onclick="CitationDialog.remove();" />
+            <input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+        </div>
+    </form>
+</span>
+
+</body>
+</html>

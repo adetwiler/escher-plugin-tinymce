@@ -1,3 +1,12 @@
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 15px;
+}
+.citation {
+    background-color: #fbeed5;
+    text-decoration: underline;
+}
 body, td, pre {color:#000; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; margin:8px;}
 body {background:#FFF;}
 body.mceForceColors {background:#FFF; color:#000;}

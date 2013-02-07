@@ -1,0 +1,22 @@
+.error { width: 100%; background-color: #ee5757; border-color: #ee5f5b; color: #ffffff; }
+
+/* Buttons */
+#insert, #cancel, #remove, input.button, .updateButton {
+    margin:0 2px; padding:0;
+    font-weight:bold;
+    width:90px; height:25px;
+    background: #E6E6E6 url(../img/button-bg.png) top center repeat-x;
+    border: 1px solid #AAA;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    cursor:pointer;
+    padding-bottom:0px;
+    float:left;
+}
+
+#insert,#insert:hover {border: 2px solid #369; color: #333;}
+#insert:hover { background: #ACF; }
+#cancel,#cancel:hover {border: 2px solid #A00; color: #333; float:left; }
+#cancel:hover { background: #FAA; }
+#remove,#remove:hover {border: 2px solid #A00; color: #333; float:left; }
+#remove:hover { background: #FAA; }
