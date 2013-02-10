@@ -15,18 +15,19 @@
 <span style="display:none;" class="content">
     <form onsubmit="CitationDialog.insert();return false;">
         <div style="display:none;" id="citationForm">
-            <p>Title: <input id="poemAuthor" name="title" type="text" class="text" /></p>
-            <p>Author: <input id="poemTitle" name="author" type="text" class="text" /></p>
-            <p>Options: <input id="poemOptsURL" name="option" type="radio" class="radio" checked="checked" onclick="CitationDialog.checkOpts();" value="url" /> URL <input id="poemOptsBM" name="option" type="radio" class="radio" onclick="CitationDialog.checkOpts();" value="bm" /> Book/Magazine <input id="poemOptsOther" name="option" type="radio" class="radio" onclick="CitationDialog.checkOpts();" value="other" /> Other</p>
+            <div><strong>Title</strong></div> <input id="poemTitle" name="title" type="text" class="text" style="padding: 5px; width: 250px; margin: 5px 0 10px; line-height: 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;"/>
+            <div><strong>Author</strong></div> <input id="poemAuthor" name="author" type="text" class="text" style="padding: 5px; width: 250px; margin: 5px 0 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;"/>
+            <p><strong>Options:</strong> <input id="poemOptsURL" name="option" type="radio" class="radio" checked="checked" onclick="CitationDialog.checkOpts();" value="url" /> URL <input id="poemOptsBM" name="option" type="radio" class="radio" onclick="CitationDialog.checkOpts();" value="bm" /> Book/Magazine <input id="poemOptsOther" name="option" type="radio" class="radio" onclick="CitationDialog.checkOpts();" value="other" /> Other</p>
             <div id="pURL">
-                <p>URL: <input id="poemURL" name="url" type="text" class="text" /></p>
+           		<div class="pull-right"><strong>URL</strong></div> 
+       		  <input id="poemURL" name="url" type="text" class="text" style="padding: 5px; width: 250px; margin: 5px 0 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;"/>
             </div>
             <div id="pBM" style="display:none;">
-                <p>Book/Magazine Title: <input id="BMTitle" name="bmTitle" type="text" class="text" /></p>
-                <p>Book/Magazine Page Number(s): <input id="BMpp" name="bmPP" type="text" class="text" /></p>
+                <div><strong>Book/Magazine Title</strong></div>  <input id="BMTitle" name="bmTitle" type="text" class="text" style="padding: 5px; width: 250px; margin: 5px 0 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;"/>
+                <div><strong>Book/Magazine Page Number(s)</strong></div><input id="BMpp" name="bmPP" type="text" class="text" style="padding: 5px; width: 250px; margin: 5px 0 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;"/>
             </div>
         </div>
-        <p id="selected">Selected text: <span id="selText"></span></p>
+        <p id="selected"><strong>Text selected for citation:</strong> <span id="selText"></span></p>
         <p id="citation" style="display:none;">Citation: <span id="citText"></span></p>
 
         <div class="mceActionPanel">
