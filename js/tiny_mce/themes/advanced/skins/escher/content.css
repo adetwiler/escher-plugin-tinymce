@@ -3,6 +3,7 @@ p {
     padding: 0;
     line-height: 15px;
 }
+b { color: #f4e19f; }
 .citation {
     background-color: #fbeed5;
     text-decoration: underline;
